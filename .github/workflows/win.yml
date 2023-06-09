@@ -1,0 +1,21 @@
+name: win
+
+on: 
+ push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+ workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: run 
+      shell: bash
+      run: |
+       workspace="${{ github.workspace }}"
+       echo $workspace
