@@ -1,6 +1,19 @@
-name: Pylint
+name: do
 
-on: [push]
+on: 
+ push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+ pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+ workflow_dispatch:
+ 
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 
 jobs:
   build:
