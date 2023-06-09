@@ -1,7 +1,7 @@
+import numpy as np
 
 print("hello world")
 
-import numpy as np
 
 a = np.arange(6)
 a2 = a[np.newaxis, :]
