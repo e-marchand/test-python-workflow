@@ -19,3 +19,8 @@ jobs:
       run: |
        workspace="${{ github.workspace }}"
        echo $workspace
+       
+       project=$(echo "$workspace" | sed 's/\\/\//g')
+       echo $project
+       
+       echo "$GITHUB_WORKSPACE"
